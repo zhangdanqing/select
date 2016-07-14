@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .select-box{
+            width:300px;
+            height:100%;
+            text-indent: 10px;
+            position: relative;
+        }
+        .select-default{
+            width:100%;
+            height:40px;
+            line-height: 40px;
+            border:1px solid #ccc;
+
+        }
+        .select-box .select-bg-before{
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 15px solid #ccc;
+            position: absolute;
+            right:10px;
+            top:13px;
+        }
+        .select-box .select-bg-after{
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-right: 15px solid #ccc;
+            border-bottom: 8px solid transparent;
+            position: absolute;
+            right:10px;
+            top:13px;
+        }
+        .select-box span{
+            display: none;
+            width:100%;
+            height:30px;
+            line-height: 30px;
+            border:1px solid #ccc;
+            margin-top: -1px;
+        }
+        .select-bc{
+            background: #3b5998;
+        }
+    </style>
+    <script type="text/javascript" src="https://www.xiaoying.com/assets/app/js/release/lib/jquery-1.9.1.js"></script>
+    <script src="js/select.js"></script>
+    <script>
+        $(function(){
+
+            var oBox=document.getElementById('select-default');
+            var aSpan=document.getElementsByTagName('span');
+            var oI=document.getElementById('sele-i');
+
+            select(oBox,aSpan,oI,'select-bg-after','select-bg-before','select-bc');
+        })
+    </script>
+</head>
+<body>
+<div class="select-box">
+    <div class="select-default" id="select-default">职业身份</div>
+    <i class="select-bg-before" id="sele-i"></i>
+    <span>老师</span>
+    <span>军人</span>
+    <span>医生</span>
+    <span>作家</span>
+    <span>演员</span>
+</div>
+</body>
+</html>
